@@ -1,0 +1,11 @@
+DEPENDENCIES
+  gitlab-ce
+    path: .
+    metadata: true
+
+GRAPH
+  gitlab-ce (1.0.0)
+    yum-gitlab-ce (>= 0.1.1)
+  yum (3.10.0)
+  yum-gitlab-ce (0.1.1)
+    yum (>= 0.0.0)
