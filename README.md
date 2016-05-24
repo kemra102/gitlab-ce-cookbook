@@ -36,6 +36,8 @@ The following variables are used to help populate Gitlab's config file:
 | `['gitlab-ce']['config']['external_url']` | `String` | External URL that the WebUI is available on. | `node['fqdn']` |
 | `['gitlab-ce']['config']['git_data_dir']` | `String` | Directory that Gitlab stores data. | `/var/opt/gitlab/git-data` |
 | `['gitlab-ce']['config']['manage_accounts']` | `Boolean` | Determines if Gitlab should manage accounts or not. | `true` |
+| `['gitlab-ce']['config']['omnibus_gitconfig']['system']` | `Hash` | Advanced setting for configuring git system settings for omnibus-gitlab internal git. | `nil` |
+| `['gitlab-ce']['config']['mattermost_external_url']` | `String` | External URL that Mattermost is available on. | `nil` |
 
 A number of config file values can also be supplied by creating none default attributes for them in a Hash style format, for example:
 
@@ -56,6 +58,9 @@ The following config items can currently be set in this way:
 * `web_server`
 * `nginx`
 * `logging`
+* `gitlab_ci`
+* `mattermost`
+* `mattermost_nginx`
 
 Please see the official Gitlab docs for more info on the configuration options that are available.
 
